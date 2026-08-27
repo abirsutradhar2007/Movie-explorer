@@ -5,28 +5,36 @@ import Searchbar from "../components/SearchBar";
 import { searchMovies } from "../api/tmdb";
 
 function Search() {
-  const { favorites, addFavorite, removeFavorite } = useOutletContext();
+  const {
+    favorites,
+    addFavorite,
+    removeFavorite,
+    searchState,
+    setSearchState,
+  } = useOutletContext();
 
-  const [query, setQuery] = useState("");
-  const [movies, setMovies] = useState([]);
+  const { query, movies, searched } = searchState;
   const [loading, setLoading] = useState(false);
-  const [searched, setSearched] = useState(false);
   const [error, setError] = useState(false);
+
+  function setQuery(nextQuery) {
+    setSearchState((previous) => ({ ...previous, query: nextQuery }));
+  }
 
   async function handleSearch() {
     if (!query.trim()) return;
 
     setLoading(true);
-    setSearched(true);
+    setSearchState((previous) => ({ ...previous, searched: true }));
     setError(false);
 
     try {
       const results = await searchMovies(query);
-      setMovies(results || []);
+      setSearchState((previous) => ({ ...previous, movies: results || [] }));
     } catch (error) {
       setError(true);
       console.log("Search error:", error);
-      setMovies([]);
+      setSearchState((previous) => ({ ...previous, movies: [] }));
     } finally {
       setLoading(false);
     }

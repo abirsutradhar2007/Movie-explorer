@@ -44,13 +44,19 @@ function MovieDetails(){
     return(
         <>
         
-        <div className="relative min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center px-5 py-12 sm:py-16 overflow-hidden border-b border-white/[0.06]">
+        <div className="min-h-screen overflow-hidden border-b border-white/[0.06] bg-slate-950 px-5 py-8 text-slate-100 sm:px-8 sm:py-12">
 
-            <div className="w-full max-w-7xl flex flex-col md:flex-row gap-10 items-center mx-auto relative">
-                {/* back to home button */}
-                <Link to="/" className="absolute -top-12 left-0 md:-top-16 rounded-xl border border-slate-700/80 bg-slate-900/70 px-5 py-2.5 text-sm font-semibold text-slate-200 shadow-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-slate-800/80 hover:text-emerald-300 hover:shadow-lg hover:shadow-emerald-500/[0.08] active:scale-95 mt-3 ml-26">
-                    back to Home
-                </Link>
+            <div className="mx-auto w-full max-w-7xl">
+                <div className="mb-8 flex flex-wrap gap-3">
+                    <Link to="/" className="rounded-xl border border-slate-700/80 bg-slate-900/70 px-5 py-2.5 text-sm font-semibold text-slate-200 shadow-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-slate-800/80 hover:text-emerald-300 hover:shadow-lg hover:shadow-emerald-500/[0.08] active:scale-95">
+                        Back to Home
+                    </Link>
+                    <Link to="/Search" className="rounded-xl border border-slate-700/80 bg-slate-900/70 px-5 py-2.5 text-sm font-semibold text-slate-200 shadow-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-slate-800/80 hover:text-emerald-300 hover:shadow-lg hover:shadow-emerald-500/[0.08] active:scale-95">
+                        Back to Search
+                    </Link>
+                </div>
+
+                <div className="flex flex-col items-center gap-10 md:flex-row">
                 {/* Poster */}
                 <div className="w-full md:w-2/5 flex justify-center">
                     <img
@@ -93,6 +99,7 @@ function MovieDetails(){
 
                     </div>
 
+                </div>
                 </div>
             </div>
         </div>

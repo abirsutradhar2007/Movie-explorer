@@ -4,6 +4,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
 function App() {
+  const [searchState, setSearchState] = useState({
+    query: "",
+    movies: [],
+    searched: false,
+  });
   const [favorites, setFavorites] = useState(() => {
     const savedFavorites = localStorage.getItem("favorites");
     if (savedFavorites) {
@@ -47,6 +52,8 @@ function App() {
             favorites,
             addFavorite,
             removeFavorite,
+            searchState,
+            setSearchState,
           }}
         />
       </main>

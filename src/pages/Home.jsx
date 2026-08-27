@@ -57,32 +57,34 @@ function Home() {
 
   return (
     <div className="min-h-full bg-slate-950">
-      <div className="mx-auto max-w-7xl px-5 pb-12 pt-6 sm:px-8 lg:px-12">
-        
-        {/* Hero */}
-        <div className="mb-10 overflow-hidden rounded-3xl border border-slate-800/70 shadow-2xl shadow-black/20">
-          <Hero />
-        </div>
+  <div className="mx-auto max-w-7xl px-3 pb-10 pt-4 sm:px-6 sm:pb-12 sm:pt-6 lg:px-12">
+    
+    {/* Hero */}
+    <div className="mb-7 overflow-hidden rounded-2xl border border-slate-800/70 shadow-2xl shadow-black/20 sm:mb-10 sm:rounded-3xl">
+      <Hero />
+    </div>
 
-        {/* Movie Section Heading */}
-        <div className="mb-6 flex items-end justify-between border-b border-slate-800/70 pb-4">
-          <div>
-            <div className="mb-2 flex items-center gap-2">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-400">
-                Explore
-              </span>
-            </div>
-            <h1 className="text-2xl font-bold tracking-tight text-slate-100 sm:text-3xl">
-              Popular Movies
-            </h1>
-          </div>
-          <span className="hidden text-xs font-medium text-slate-600 sm:block">
-            {movies.length} movies
+    {/* Movie Section Heading */}
+    <div className="mb-5 flex items-end justify-between border-b border-slate-800/70 pb-3 sm:mb-6 sm:pb-4">
+      <div>
+        <div className="mb-1.5 flex items-center gap-2 sm:mb-2">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-400 sm:text-xs">
+            Explore
           </span>
         </div>
 
-        {/* Popular Movies Grid */}
-        <div className="grid grid-cols-2 gap-x-4 gap-y-7 sm:grid-cols-3 sm:gap-x-5 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+        <h1 className="text-xl font-bold tracking-tight text-slate-100 sm:text-3xl">
+          Popular Movies
+        </h1>
+      </div>
+
+      <span className="hidden text-xs font-medium text-slate-600 sm:block">
+        {movies.length} movies
+      </span>
+    </div>
+
+    {/* Popular Movies Grid */}
+    <div className="grid grid-cols-2 gap-x-3 gap-y-6 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-7 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {movies.map((movie) => {
             const isFavorite = favorites.some((fav) => fav.id === movie.id);
             return (

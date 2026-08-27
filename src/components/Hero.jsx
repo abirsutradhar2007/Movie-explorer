@@ -3,30 +3,30 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-white/[0.06] bg-slate-950 px-5 py-12 sm:py-16 rounded-xl">
+    <section className="relative overflow-hidden rounded-xl border-b border-white/[0.06] bg-slate-950 px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
 
       {/* Ambient background glow */}
       <div className="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full bg-emerald-500/[0.06] blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 right-1/3 h-80 w-80 rounded-full bg-teal-400/[0.05] blur-3xl" />
 
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-10">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 sm:gap-10">
 
         {/* Left Side */}
         <div className="max-w-2xl">
 
-          <h1 className="text-3xl font-extrabold leading-[1.08] tracking-tight text-slate-100 sm:text-4xl lg:text-6xl">
+          <h1 className="text-2xl font-extrabold leading-[1.1] tracking-tight text-slate-100 sm:text-4xl lg:text-6xl">
             Discover Your Next
             <span className="block bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
               Favorite Movie
             </span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
+          <p className="mt-4 max-w-xl text-sm leading-6 text-slate-400 sm:mt-5 sm:text-base sm:leading-7">
             Explore thousands of movies, discover new favorites,
             and keep track of the movies you love.
           </p>
 
-          <div className="mt-7 flex gap-3">
+          <div className="mt-6 flex flex-wrap gap-3 sm:mt-7">
 
             <Link
               to="/favorites"
@@ -40,7 +40,7 @@ function Hero() {
         </div>
 
         {/* Right Side */}
-        <div className="hidden w-72 shrink-0 md:block">
+        <div className="hidden w-64 shrink-0 lg:block xl:w-72">
           <img
             src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&auto=format&fit=crop&q=80"
             alt="Movie theater"

@@ -17,7 +17,7 @@ return (
                 </span>
 
                 <span>
-                    Movie<span className="text-blue-400">App</span>
+                    Movie<span className="text-blue-400">Mate</span>
                 </span>
             </Link>
 

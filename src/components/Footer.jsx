@@ -24,7 +24,7 @@ function Footer() {
               </span>
 
               <span>
-                Movie<span className="text-emerald-400">App</span>
+                Movie<span className="text-emerald-400">Mate</span>
               </span>
             </Link>
 

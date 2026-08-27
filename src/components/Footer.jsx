@@ -71,7 +71,7 @@ function Footer() {
                   href="mailto:contact@movieapp.com"
                   className="transition-colors duration-200 hover:text-emerald-300"
                 >
-                  contact@movieapp.com
+                  abirslg@gmail.com
                 </a>
               </p>
 
